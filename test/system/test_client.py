@@ -311,8 +311,8 @@ class TestClient(unittest.TestCase):
 
     def test_secure_transport( self ):
         # create key and cert temp files
-        with ( tempfile.NamedTemporaryFile() as kf,
-                tempfile.NamedTemporaryFile() as cf ):
+        with tempfile.NamedTemporaryFile() as kf,\
+                tempfile.NamedTemporaryFile() as cf:
             kf.write( private_key.encode() )
             kf.flush()
             cf.write( certificate.encode() )
