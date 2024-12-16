@@ -323,7 +323,7 @@ class TestClient(unittest.TestCase):
                     password=dut.settings['password'], key_file=kf.name,
                     cert_file=cf.name, return_node=True)
                 res = node.enable( 'show version' )
-            self.assertIn( 'version', res[0]['result'] )
+                self.assertIn( 'version', res[0]['result'] )
 
 class TestNode(unittest.TestCase):
 
